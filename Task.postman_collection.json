@@ -1,0 +1,304 @@
+{
+	"info": {
+		"_postman_id": "f1631cdc-e54a-4aac-8f3d-0b56b2ba2dd9",
+		"name": "Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19768888"
+	},
+	"item": [
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"pritha\",\n    \"email\":\"d@gmail.com\",\n    \"password\":\"Abc@12345\",\n    \"confirm_password\":\"Abc@12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/auth/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"d@gmail.com\",\n    \"password\":\"Abc@12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Project",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmY0ZTEyOWJkYWEyYWIwNjYxMjI0YjQiLCJlbWFpbCI6ImRAZ21haWwuY29tIiwiaXNMb2dpbiI6dHJ1ZSwiaWF0IjoxNjYwMjE1Njk0LCJleHAiOjE2NjAyMTkyOTR9.6tKAUlFgkuuc34XhFpxumwcbRXAXRb0KvZYtOrR5t5I",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"cab Project\",\n    \"description\":\"booking car\",\n    \"host_link\":\"\",\n    \"technolgy\":\"PHP\",\n    \"category\":\"travelling\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/project",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"project"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read Project",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmY0ZTEyOWJkYWEyYWIwNjYxMjI0YjQiLCJlbWFpbCI6ImRAZ21haWwuY29tIiwiaXNMb2dpbiI6dHJ1ZSwiaWF0IjoxNjYwNDA0MTA3LCJleHAiOjE2NjA0MDQyMjd9.oRiKTbMz-zo7ebVLsUQCBPxgWNKU_OFekETkyZVj-7k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/project",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"project"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Project",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmYzMmViMDQxN2JiYThlNmZkOWE0NDEiLCJlbWFpbCI6ImRAZ21haWwuY29tIiwiaWF0IjoxNjYwMTA3NDM4LCJleHAiOjE2NjAxMTEwMzh9.oNPG1CvU40BV9qBOnVDdLH8k7yo0ONBwE22FnaJPlOA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Update Blog Projects\",\n    \"description\":\"update createiing Blogs\",\n    \"user_id\":\"62f32eb0417bba8e6fd9a441\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/project/62f33b85795750d24ecbbd76",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"project",
+						"62f33b85795750d24ecbbd76"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmY0ZTEyOWJkYWEyYWIwNjYxMjI0YjQiLCJlbWFpbCI6ImRAZ21haWwuY29tIiwiaXNMb2dpbiI6dHJ1ZSwiaWF0IjoxNjYwMjE1Njk0LCJleHAiOjE2NjAyMTkyOTR9.6tKAUlFgkuuc34XhFpxumwcbRXAXRb0KvZYtOrR5t5I",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"add logout button\",\n    \"description\":\"logout page\",\n    \"comments\":\"urgent\",\n    \"assigned_to\":\"Principle\",\n    \"dead_line\":\"25 Aug\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/task/62f4e222ea0fb594aec56826",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"task",
+						"62f4e222ea0fb594aec56826"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read Task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmY0ZDhlZjMwODA3NjUyZmI0ZGFiZmQiLCJlbWFpbCI6InBAZ21haWwuY29tIiwiaXNMb2dpbiI6dHJ1ZSwiaWF0IjoxNjYwMjEzNTIyLCJleHAiOjE2NjAyMTcxMjJ9.CIBKhhdS5F6Fhs-U4GrFC7IV7C1cgE1s4unrnqyCCic",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/task/62f4d95030807652fb4dac04",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"task",
+						"62f4d95030807652fb4dac04"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmY0ZDhlZjMwODA3NjUyZmI0ZGFiZmQiLCJlbWFpbCI6InBAZ21haWwuY29tIiwiaXNMb2dpbiI6dHJ1ZSwiaWF0IjoxNjYwMjE1NTMyLCJleHAiOjE2NjAyMTkxMzJ9.3s8i4UjgoYnc3yALJ5VF-suWGqpO49mKP5t1tS4yPQk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"add login buttons\",\n    \"description\":\"at login pages\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/task/62f4d95030807652fb4dac04/62f4ddcf3188ecba6e4e50ba",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"task",
+						"62f4d95030807652fb4dac04",
+						"62f4ddcf3188ecba6e4e50ba"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmY0ZTEyOWJkYWEyYWIwNjYxMjI0YjQiLCJlbWFpbCI6ImRAZ21haWwuY29tIiwiaXNMb2dpbiI6dHJ1ZSwiaWF0IjoxNjYwMzY0MTI1LCJleHAiOjE2NjAzNjc3MjV9.34zUkdo0b7W_dyjW3wwFBFuSZNy99CUtRTle0feJkwo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/auth/logout",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
